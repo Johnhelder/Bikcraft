@@ -5,9 +5,14 @@
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="descreption" content="Bicicletas eletricas feita a mão">
   <title>Bicicletas eletricas</title>
+  <meta name="descreption" content="Bicicletas eletricas feita a mão">
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./css/style.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!--essa linha de código abaixo é para garantir que não der erro se alguém estiver com o javascrip desativado no brouse-->
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 
 <body>
@@ -17,7 +22,7 @@
 
       <nav aria-label="primaria">
         <ul class="header-menu font-1-m cor-0">
-          <li><a href="./bicicleta.html">Bicicletas</a></li>
+          <li><a href="./bicicletas.html">Bicicletas</a></li>
           <li><a href="./seguros.html">Seguros</a></li>
           <li><a href="./contato.html">Contato</a></li>
         </ul>
@@ -28,13 +33,15 @@
   <main class="introducao-bg">
     <div class="introducao container">
       <div class="introducao-conteudo">
-        <h1 class="font-1-xxl cor-0">Bicicletas feita a mão<span class="cor-p1">.</span></h1>
-        <p class="font-2-l cor-5">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você.Explore o mundo na sua velocidade com a BikCreft</p>
-        <a class="botao" href="./bicicleta.html">Escolha a sua</a>
+        <h1 class="font-1-xxl cor-0 fadeInDown" data-anime="200">Bicicletas feita a mão<span class="cor-p1">.</span></h1>
+        <p class="font-2-l cor-5 fadeInDown" data-anime="400">Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você.Explore o mundo na sua velocidade com a BikCreft</p>
+        <a class="botao fadeInDown" data-anime="600" href="./bicicletas.html">Escolha a sua</a>
       </div>
-      <div>
+      <picture data-anime="800" class="fadeInDown">
+        <source media="(max-width: 800px)" srcset="./img/bicicletas/nimbus.jpg">
         <img src="./img/fotos/introducao.jpg" alt="Bicicleta elétrica preta">
-      </div>
+      </picture>
+
     </div>
   </main>
   <article class="bicicletas-lista">
@@ -73,7 +80,7 @@
         <span class="font-2-l-b cor-5">Tecnologia Avançada</span>
         <h2 class="fotn-1-xxl cor-0">Você escolhe as suas cores e componentes<span class="cor-p1">.</span></h2>
         <p class="font-2-l cor-5">Cada BikCreft é única e possui a sua identidade. As medida serão exatas para o seu corpo e altura, garantindo maior conforto e ergonomia na sua pedalada. Você pode também personalizar completamente as suas cores.</p>
-        <a class="link" href="./bicicleta.html">Escolha um modelo</a>
+        <a class="link" href="./bicicletas.html">Escolha um modelo</a>
         <div class="tecnologia-vantagens">
           <div>
             <img src="./img/icones/eletrica.svg" alt="">
@@ -182,7 +189,7 @@
         <h3 class="font-2-l-b cor-0">Informações</h3>
         <nav>
           <ul class="font-1-m cor-5">
-            <li><a href="./bicicleta.html">Bicicletas</a></li>
+            <li><a href="./bicicletas.html">Bicicletas</a></li>
             <li><a href="./seguros.html">Seguros</a></li>
             <li><a href="./contato.html">Contato</a></li>
             <li><a href="./termos.html">Termos e condições</a></li>
@@ -192,6 +199,8 @@
       <p class="footer-copy font-2-m cor-6">Bikcreft © Alguns direitos reservados.</p>
     </div>
   </footer>
+  <script src="./js/plugins/simple-anime.js"></script>
+  <script src="./js/scrip.js"></script>
 </body>
 
 </html>
